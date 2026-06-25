@@ -37,7 +37,7 @@ After clciking on any subject or you can scroll down you can see the list of boo
 <ul>
   <li> Simple and plain dark UI</li>
   <li>Contains books across 4 major Domains of STEM i.e. physics , chemistry , mathematics and biology.</li>
-  <li>Both Indian and Foreign authors books are there with separated section in each subject <li>
+  <li>Both Indian and Foreign authors books are there with separated section in each subject </li>
   <li>Each book has its ratings , reviews and cover page </li>
   <li>All books have a open pdf feature in which direct pdf of book can be accessed </li>
 </ul>
