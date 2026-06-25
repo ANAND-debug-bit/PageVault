@@ -1,0 +1,90 @@
+* { box-sizing: border-box;
+margin: 0;
+padding: 0;}
+:root { --bg:#0d0e14;
+--bg-card: #13141d;
+--bg-card-h: #181924;  
+--border: #252636;
+--text-main: #e8e9f0;
+--text-muted: #7e8099;
+--text-dim: #454660;
+
+--physics: #5b8fff;  /* subject colors  */
+--physics-dim: #1b2a52;
+--chemistry: #00d4aa;  
+--chem-dim: #0a2e28;
+--maths:#f7b731;   
+--maths-dim: #342700;
+--biology:#ff6b9d;   
+--bio-dim:#380d22;
+--font-display:'Playfair Display', Georgia, serif;
+--font-body: 'Inter', system-ui, sans-serif;
+--font-mono: 'JetBrains Mono', monospace; }
+
+html { scroll-behavior: smooth;}
+
+body { background: var(--bg);
+color: var(--text-main);
+font-family: var(--font-body);
+font-size: 15px;
+line-height: 1.6;
+-webkit-font-smoothing: antialiased;  }
+
+/* header of site styling */
+.hero { position: relative;
+min-height: 92vh; 
+display: flex;
+align-items: center;
+justify-content: center;
+overflow: hidden;
+border-bottom: 1px solid var(--border); }
+
+.hero-bg-grid {position: absolute;
+inset: 0; 
+background-image:
+linear-gradient(rgba(91,143,255,.04) 1px, transparent 1px),
+linear-gradient(90deg, rgba(91,143,255,.04) 1px, transparent 1px);
+background-size: 48px 48px;
+/* mask makes it fade out at the edges, so cool */
+mask-image: radial-gradient(ellipse 80% 60% at 50% 50%, black, transparent); }
+
+/* adding glow effect in the middle */
+.hero-bg-grid::after { content: '';
+position: absolute;
+inset: 0;
+background: radial-gradient(ellipse 60% 50% at 50% 50%,
+rgba(91, 143, 255, 0.08), transparent 70%); }
+
+.hero-content { position: relative;
+z-index: 1; 
+text-align: center;
+padding: 2rem;
+max-width: 680px; }
+
+/* little badge thingy at the top of the site  */
+.site-badge { display: inline-block;
+font-family: var(--font-mono);
+font-size: 11px;
+letter-spacing: 0.2em;
+text-transform: uppercase;
+color: var(--text-muted);
+border: 1px solid var(--border);
+padding: 5px 14px;
+border-radius: 100px; 
+margin-bottom: 2rem; }
+
+.hero-title { font-family: var(--font-display);
+font-size: clamp(4rem, 12vw, 8.5rem); 
+font-weight: 700;
+letter-spacing: -0.03em;
+line-height: 1;
+color: var(--text-main);
+margin-bottom: 1.5rem; }
+
+.hero-title .accent { color: var(--physics); 
+font-style: italic; }
+
+.hero-tagline { font-size: 1.05rem;
+color: var(--text-muted);
+line-height: 1.8;
+margin-bottom: 3rem; }
