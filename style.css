@@ -88,3 +88,233 @@ font-style: italic; }
 color: var(--text-muted);
 line-height: 1.8;
 margin-bottom: 3rem; }
+
+.subject-nav {display: flex;
+flex-wrap: wrap; 
+gap: 0.75rem;
+justify-content: center; }
+
+.nav-pill { font-family: var(--font-mono);
+font-size: 13px;
+font-weight: 600;
+text-decoration: none;
+padding: 10px 22px;
+border-radius: 100px;
+border: 1px solid;
+transition: transform 0.2s, box-shadow 0.2s; }
+
+.nav-pill:hover { transform: translateY(-2px); }
+
+.physics-pill { color: var(--physics); border-color: var(--physics);background:rgba(91,143,255,.08); }
+.chemistry-pill { color: var(--chemistry);border-color: var(--chemistry); background:rgba(0,212,170,.08); }
+.maths-pill { color: var(--maths);border-color: var(--maths);background:rgba(247,183,49,.08); }
+.biology-pill { color: var(--biology);border-color: var(--biology);background:rgba(255,107,157,.08); }
+
+
+/* subject sections */
+
+.subject-section { max-width: 1280px;
+margin: 0 auto; 
+padding: 5rem 2rem 2rem;}
+
+.section-header { display: flex;
+align-items: center;
+gap: 1rem;
+margin-bottom: 3rem; }
+
+.section-icon { font-size: 2rem;
+line-height: 1; }
+
+.section-header h2 { font-family: var(--font-display);
+font-size: clamp(2rem, 5vw, 3.5rem);
+font-weight: 700;
+white-space: nowrap; }
+
+.section-line {flex: 1;
+height: 1px;
+background: var(--border);
+margin-left: 0.5rem; }
+
+.physics-header h2 { color: var(--physics); }
+.chemistry-header h2 { color: var(--chemistry); }
+.maths-header h2 { color: var(--maths); }
+.biology-header h2 { color: var(--biology); }
+
+
+/* author labels i.e for Indian and Foreign */
+
+.author-block { margin-bottom: 3.5rem; }
+
+.author-label { font-family: var(--font-mono);
+font-size: 11px;
+font-weight: 600;
+letter-spacing: 0.18em;
+text-transform: uppercase;
+margin-bottom: 1.5rem;
+padding: 6px 14px;
+border-radius: 6px;
+display: inline-flex;
+align-items: center;
+gap: 0.5rem; }
+
+.indian-label { color: #ff9a3c;
+background: rgba(255,154,60,.08);
+border: 1px solid rgba(255,154,60,.2); }
+
+.foreign-label { color: #a78bfa;
+background: rgba(167,139,250,.08);
+border: 1px solid rgba(167,139,250,.2); }
+
+.book-grid { display: grid;
+grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+gap: 1.5rem; }
+
+.book-card { background: var(--bg-card);
+border: 1px solid var(--border);
+border-radius: 16px;
+overflow: hidden;
+display: flex;
+flex-direction: column;
+transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+cursor: pointer; }
+
+.book-card:hover { transform: translateY(-5px);}
+
+.physics-card:hover{ border-color: var(--physics);box-shadow: 0 8px 32px rgba(91,143,255,.15); }
+.chemistry-card:hover { border-color: var(--chemistry); box-shadow: 0 8px 32px rgba(0,212,170,.15); }
+.maths-card:hover { border-color: var(--maths); box-shadow: 0 8px 32px rgba(247,183,49,.15); }
+.biology-card:hover { border-color: var(--biology);box-shadow: 0 8px 32px rgba(255,107,157,.15); }
+
+/* book cover image area below each subject */
+.book-cover { position: relative;
+width: 100%;
+aspect-ratio: 3/4; 
+background: var(--bg);
+overflow: hidden;
+display: flex;
+align-items: center;
+justify-content: center;
+border-bottom: 1px solid var(--border); }
+
+.book-cover img { width: 100%;
+height: 100%;
+object-fit: cover;
+position: absolute;
+top: 0;
+left: 0; }
+
+/* to show when image is missing */
+.cover-placeholder { font-family: var(--font-display);
+font-weight: 700;
+font-style: italic;
+font-size: 1.6rem;
+text-align: center;
+line-height: 1.2;
+color: var(--text-dim);
+z-index: 1;
+pointer-events: none;
+user-select: none;
+transition: color 0.25s; }
+
+.physics-card .cover-placeholder { color: var(--physics-dim); }
+.chemistry-card.cover-placeholder { color: var(--chem-dim); }
+.maths-card .cover-placeholder { color: var(--maths-dim); }
+.biology-card .cover-placeholder { color: var(--bio-dim); }
+
+
+.physics-card:hover.cover-placeholder { color: rgba(91,143,255,.3); }
+.chemistry-card:hover.cover-placeholder { color: rgba(0,212,170,.3); }
+.maths-card:hover.cover-placeholder { color: rgba(247,183,49,.3); }
+.biology-card:hover.cover-placeholder { color: rgba(255,107,157,.3); }
+
+/* dark gradient at bottom of cover so text would be readable if i add any */
+.book-cover::after { content: '';
+position: absolute;
+inset: 0;
+background: linear-gradient(to bottom, transparent 60%, rgba(13,14,20,.8));
+z-index: 2; }
+
+/* book title, author, review etc */
+.book-info { padding: 1.25rem;
+flex: 1;
+display: flex;
+flex-direction: column;
+gap: 0.5rem; }
+
+.book-info h4 { font-family: var(--font-display);
+font-size: 1rem;
+font-weight: 700;
+line-height: 1.35;
+color: var(--text-main); }
+
+.author-name { font-family: var(--font-mono);
+font-size: 11.5px;
+color: var(--text-muted);
+font-weight: 600; }
+
+.stars { font-size: 13px;
+letter-spacing: 1px;
+color: #f7b731; }
+
+.review { font-size: 13px;
+color: var(--text-muted);
+line-height: 1.65;
+flex: 1; }
+
+.tags { display: flex;
+  flex-wrap: wrap;
+gap: 0.4rem;
+margin-top: 0.25rem; }
+
+.tag {font-family: var(--font-mono);
+font-size: 10px;
+  font-weight: 600;
+letter-spacing: 0.05em;
+padding: 3px 9px;
+border-radius: 100px;
+  background: rgba(255,255,255,.04);
+border: 1px solid var(--border);
+color: var(--text-muted); }
+
+/* open pdf button styling */
+.pdf-btn { display: inline-block;
+margin-top: 0.75rem;
+padding: 9px 16px;
+border-radius: 8px;
+font-family: var(--font-mono);
+font-size: 12px;
+font-weight: 600;
+text-decoration: none;
+   text-align: center;
+  background: rgba(255,255,255,.05);
+border: 1px solid var(--border);
+color: var(--text-muted);
+transition: background 0.2s, color 0.2s, border-color 0.2s; }
+ 
+.physics-card .pdf-btn:hover { background: var(--physics-dim); color: var(--physics);border-color: var(--physics); }
+.chemistry-card .pdf-btn:hover { background: var(--chem-dim);color: var(--chemistry);border-color: var(--chemistry); }
+.maths-card .pdf-btn:hover { background: var(--maths-dim); color: var(--maths); border-color: var(--maths); }
+.biology-card .pdf-btn:hover { background: var(--bio-dim);color: var(--biology);border-color: var(--biology); }
+/* site ending part  */
+.site-footer { text-align: center;
+padding: 3rem 2rem;
+border-top: 1px solid var(--border);
+font-family: var(--font-mono);
+font-size: 12px;
+color: var(--text-dim);
+margin-top: 5rem; }
+
+/* customising scrollbar  */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 100px; }
+::-webkit-scrollbar-thumb:hover { background: #3a3b55; }
+
+
+@media (max-width: 600px) { .hero { min-height: 80vh; }
+.book-grid { grid-template-columns: 1fr 1fr; gap: 1rem; } 
+.book-cover { aspect-ratio: 2/3; }
+.subject-section { padding: 3rem 1rem 1rem; } }
+
+@media (max-width: 400px) {.book-grid { grid-template-columns: 1fr; }}
+
