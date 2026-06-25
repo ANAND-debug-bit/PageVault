@@ -19,7 +19,7 @@
   <br>
 After clciking on any subject or you can scroll down you can see the list of books with separated sections on the basis of author origin , click on any book open pdf feature and you can directly see the ebook .
 
-![site2](image.png)
+![site](image.png)
 
 </p>
 <hr>
