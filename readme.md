@@ -45,7 +45,7 @@ After clciking on any subject or you can scroll down you can see the list of boo
 <hr>
 
 <h3> AI use </h3>
-<p>I used AI for all the content,review/description and book research work  </p>
+<p>I used AI for the content, reviews/descriptions, and book research. The initial CSS styling was AI-assisted, but I went through it afterward and reworked the structure by hand for the hover effects, color variables, and removing repetitive patterns to address the reviewer feedback and worked on that the CSS which was AI-assisted. </p>
 <hr>
 <h2>TECH STACK</h2>
 
